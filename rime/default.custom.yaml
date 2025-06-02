@@ -1,0 +1,8 @@
+patch:
+  menu/page_size: 7
+
+  schema_list:
+    - schema: rime_ice
+
+  switcher/hotkeys:
+    - Control+grave

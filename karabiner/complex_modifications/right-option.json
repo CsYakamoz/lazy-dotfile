@@ -1,0 +1,26 @@
+{
+  "title": "Right Option",
+  "maintainers": ["csyakamoz"],
+  "rules": [
+    {
+      "description": "Right Option: As Hyper Key",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_option",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "modifiers": ["left_shift", "left_option", "left_command"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

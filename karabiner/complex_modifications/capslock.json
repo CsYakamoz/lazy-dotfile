@@ -1,0 +1,31 @@
+{
+  "title": "CapsLock",
+  "maintainers": ["csyakamoz"],
+  "rules": [
+    {
+      "description": "CapsLock: Esc if Caps is tapped, Ctrl if held",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

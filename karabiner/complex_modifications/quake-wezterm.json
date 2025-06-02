@@ -1,0 +1,58 @@
+{
+  "title": "Quake-style Hotkey for Wezterm",
+  "author": "https://github.com/wezterm/wezterm/issues/1751#issuecomment-1722362645",
+  "maintainers": ["csyakamoz"],
+  "rules": [
+    {
+      "description": "Wezterm: Launch/show if it is not in foreground",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": {
+              "mandatory": ["left_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open '/Applications/WezTerm.app'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["^com\\.github\\.wez\\.wezterm$"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Wezterm: Minimize if it is in foreground",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": {
+              "mandatory": ["left_command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "h",
+              "modifiers": ["command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com\\.github\\.wez\\.wezterm$"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
