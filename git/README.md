@@ -6,4 +6,4 @@
 
 Documentation Overview: <https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md>
 
-File Path: `~/Library/Application\ Support/jesseduffield/lazygit/config.yml`
+File Path: `~/Library/Application\ Support/lazygit/config.yml`
