@@ -28,6 +28,7 @@ source $ZSH/oh-my-zsh.sh
 
 # alias {{{ #
 alias j="jump"
+alias n="nvim"
 alias cp="cp -i"
 alias tailf="tail -f"
 alias gw="git worktree"
