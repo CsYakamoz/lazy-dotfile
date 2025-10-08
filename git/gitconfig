@@ -5,29 +5,19 @@
 	name = user
 	email = user@mail.gom
 
+# sort by alphabetical order
+
 [branch]
 	sort = -committerdate
 
-[tag]
-	sort = version:refname
-
-[rerere]
-	enabled = true
-	autoupdate = true
-
-[rebase]
-	autoSquash = true
-	autoStash = true
-	updateRefs = true
+[column]
+	ui = auto
 
 [commit]
 	verbose = true
 
-[pull]
-	rebase = true
-
-[merge]
-	conflictstyle = zdiff3
+[core]
+	excludesfile = ~/.gitignore
 
 [diff]
 	algorithm = histogram
@@ -35,6 +25,38 @@
 	mnemonicPrefix = true
 	renames = true
 
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+
+[help]
+	autocorrect = prompt
+
+[merge]
+	conflictstyle = zdiff3
+
+[pull]
+	rebase = true
+
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+
+[rerere]
+	enabled = true
+	autoupdate = true
+
+[tag]
+	sort = version:refname
+
+# delta settings
 [core]
 	pager = delta
 
