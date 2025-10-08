@@ -1,0 +1,3 @@
+patch:
+  "switches/@0/reset": 1 # default to english
+  "switches/@3/reset": 0 # default to no emoji
